@@ -1,0 +1,28 @@
+@import "../../constants.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 30px;
+  background-color: $primary-color;
+}
+
+.header__link-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.header__link {
+  list-style: none;
+}
+
+.header__link-text {
+  text-decoration: none;
+  color: $primary-font-color-disabled;
+  &:hover {
+    color: $primary-font-color;
+  }
+}
