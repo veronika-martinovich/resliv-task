@@ -11,6 +11,7 @@ export const employeesState = (state = defaultData, action) => {
     case SET_EMPLOYEES:
       return {
         ...state,
+        employees: action.payload,
       };
     default:
       return state;

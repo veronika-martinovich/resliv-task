@@ -1,9 +1,17 @@
 import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { EmployeesPageView } from "../../components/EmployeesPageView/EmployeesPageView";
+import { actionGetEmployeeData } from "../../reducers/employees/employeesActions";
+import { employeesSelector } from "../../reducers/employees/employeesReducer";
 
 export const EmployeesPage = () => {
-  useEffect(async () => {
+  const { employees } = useSelector(employeesSelector);
+  const dispatch = useDispatch();
 
-  }, []);
-  return <EmployeesPageView />;
+  useEffect(() => {
+    dispatch(actionGetEmployeeData());
+  }, [dispatch]);
+
+  if (!employees) return null;
+  return <EmployeesPageView employees={employees} />;
 };

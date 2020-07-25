@@ -1,8 +1,10 @@
 import { takeEvery } from "redux-saga/effects";
-import { SET_EMPLOYEES, GET_EMPLOYEES } from "../reducers/employees/employeesActions";
+import { GET_EMPLOYEES } from "../reducers/employees/employeesActions";
+import { getEmployeesData } from "../sagas/getEmployeesData";
 
 //const actionsForEmployees = [SET_EMPLOYEES, GET_EMPLOYEES];
 
 export function* sagaWatcher() {
-  yield takeEvery(SET_EMPLOYEES, /* func */);
+  
+  yield takeEvery(GET_EMPLOYEES, getEmployeesData);
 }

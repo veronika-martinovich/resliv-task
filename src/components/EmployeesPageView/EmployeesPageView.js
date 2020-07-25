@@ -1,5 +1,11 @@
 import React from "react";
 
-export const EmployeesPageView = () => {
-  return <h1>employee</h1>;
+export const EmployeesPageView = ({ employees }) => {
+  return (
+    <div>
+      {employees.map((item, index) => (
+        <div key={index}>{item.email}</div>
+      ))}
+    </div>
+  );
 };
