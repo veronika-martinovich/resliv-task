@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { EmployeesPageView } from "../../components/EmployeesPageView/EmployeesPageView";
 
 export const EmployeesPage = () => {
-  return <h1>employee</h1>;
+  useEffect(async () => {
+
+  }, []);
+  return <EmployeesPageView />;
 };
