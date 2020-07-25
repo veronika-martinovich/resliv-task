@@ -17,3 +17,11 @@
   border-bottom: 1px solid $primary-color;
   text-align: start;
 }
+
+.icon_delete {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("./assets/delete-icon.svg");
+  cursor: pointer;
+}

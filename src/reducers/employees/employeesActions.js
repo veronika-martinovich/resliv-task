@@ -15,6 +15,12 @@ export const actionAddEmployee = (newEmployee) => ({
   payload: newEmployee,
 });
 
+export const DELETE_EMPLOYEE = "DELETE_EMPLOYEE";
+export const actionDeleteEmployee = (index) => ({
+  type: DELETE_EMPLOYEE,
+  payload: index,
+});
+
 export const UPDATE_NEXT_EMPLOYEE_INDEX = "UPDATE_NEXT_EMPLOYEE_INDEX";
 export const actionUpdateNextEmployeeIndex = (index) => ({
   type: UPDATE_NEXT_EMPLOYEE_INDEX,

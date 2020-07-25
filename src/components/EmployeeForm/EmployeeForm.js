@@ -48,7 +48,6 @@ export const EmployeeForm = () => {
       />
       <PrimaryButton
         buttonName="Добавить сотрудника"
-        //onButtonClick={addEmployeeHandler}
       />
     </form>
   );
