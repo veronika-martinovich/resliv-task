@@ -1,0 +1,13 @@
+@import "../../constants.scss";
+
+.primary-button {
+  box-sizing: border-box;
+  height: 35px;
+  background-color: $primary-color;
+  border: 0;
+  border-radius: $border-radius;
+  padding: 10px;
+  color: $primary-font-color-disabled;
+  cursor: pointer;
+  outline: none;
+}

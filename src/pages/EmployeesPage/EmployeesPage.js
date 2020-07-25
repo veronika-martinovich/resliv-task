@@ -4,6 +4,7 @@ import { EmployeesTable } from "../../components/EmployeesTable/EmployeesTable";
 import { EmployeeForm } from "../../components/EmployeeForm/EmployeeForm";
 import { actionGetEmployeeData } from "../../reducers/employees/employeesActions";
 import { employeesSelector } from "../../reducers/employees/employeesReducer";
+import "./EmployeesPage.scss";
 
 export const EmployeesPage = () => {
   const { employees } = useSelector(employeesSelector);
