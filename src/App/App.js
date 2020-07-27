@@ -6,7 +6,6 @@ export const App = ({ children }) => {
   return (
     <div>
       <Header />
-
       {children}
     </div>
   );

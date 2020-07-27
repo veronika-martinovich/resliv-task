@@ -6,7 +6,7 @@ import { sagaWatcher } from "./store/sagaWatcher";
 import "./index.scss";
 import { App } from "./App/App";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { EmployeesPage } from "./pages/EmployeesPage/EmployeesPage";
 import { routes } from "./App/routes";
@@ -17,7 +17,10 @@ ReactDOM.render(
       <BrowserRouter>
         <App>
           <Switch>
-            <Route exact path={routes.home} component={HomePage} />
+            <Route exact path="/">
+              <Redirect to="/home" />
+            </Route>
+            <Route path={routes.home} component={HomePage} />
             <Route path={routes.empoloyees} component={EmployeesPage} />
           </Switch>
         </App>
