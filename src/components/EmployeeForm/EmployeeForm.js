@@ -4,7 +4,7 @@ import { Input } from "../Input/Input";
 import { PrimaryButton } from "../PrimaryButton/PrimaryButton";
 import {
   actionAddEmployee,
-  actionUpdateNextEmployeeIndex,
+  actionUpdateNextEmployeeId,
 } from "../../reducers/employees/employeesActions";
 import { employeesSelector } from "../../reducers/employees/employeesReducer";
 import "./EmployeeForm.scss";
@@ -12,7 +12,7 @@ import "./EmployeeForm.scss";
 export const EmployeeForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const { nextEmployeeIndex } = useSelector(employeesSelector);
+  const { nextEmployeeId } = useSelector(employeesSelector);
   const dispatch = useDispatch();
 
   const placeholders = {
@@ -23,7 +23,7 @@ export const EmployeeForm = () => {
   const addEmployeeHandler = (e) => {
     e.preventDefault();
     const newEmployee = {
-      id: nextEmployeeIndex,
+      id: nextEmployeeId,
       email: "janet.weaver@reqres.in",
       first_name: firstName,
       last_name: lastName,
@@ -31,7 +31,7 @@ export const EmployeeForm = () => {
         "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg",
     };
     dispatch(actionAddEmployee(newEmployee));
-    dispatch(actionUpdateNextEmployeeIndex(nextEmployeeIndex + 1));
+    dispatch(actionUpdateNextEmployeeId(nextEmployeeId + 1));
   };
 
   return (

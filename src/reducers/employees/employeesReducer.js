@@ -1,13 +1,13 @@
 import {
   SET_EMPLOYEES,
   ADD_EMPLOYEE,
-  UPDATE_NEXT_EMPLOYEE_INDEX,
+  UPDATE_NEXT_EMPLOYEE_ID,
   DELETE_EMPLOYEE,
 } from "./employeesActions";
 
 const defaultData = {
   employees: [],
-  nextEmployeeIndex: 12,
+  nextEmployeeId: 13,
 };
 
 export const employeesSelector = (state) => state.employeesState;
@@ -32,10 +32,10 @@ export const employeesState = (state = defaultData, action) => {
         ...state,
         employees: state.employees.filter((item) => item.id !== action.payload),
       };
-    case UPDATE_NEXT_EMPLOYEE_INDEX:
+    case UPDATE_NEXT_EMPLOYEE_ID:
       return {
         ...state,
-        nextEmployeeIndex: action.payload,
+        nextEmployeeId: action.payload,
       };
     default:
       return state;
